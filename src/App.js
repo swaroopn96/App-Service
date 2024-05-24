@@ -1,28 +1,16 @@
+import { useState } from "react";
 export default function App() {
+  const [count, setCount] = useState(0);
+
   const handleClick = () => {
-    console.log("Button was clicked");
+    console.log(count);
+    setCount(count + 1);
   };
-  // return (
-  //   <div>
-  //     <button
-  //       onClick={function () {
-  //         console.log("Button was clicked");
-  //       }}
-  //     >
-  //       Add Animal
-  //     </button>
-  //   </div>
-  // );
 
   return (
     <div>
-      <button
-        onClick={() => {
-          console.log("Button was clicked");
-        }}
-      >
-        Add Animal
-      </button>
+      <button onClick={handleClick}>Add Animal</button>
+      <div>Number of animals: {count}</div>
     </div>
   );
 }
