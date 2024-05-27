@@ -1,3 +1,3 @@
-export default function AnimalShow() {
-  return <div>Cow!!</div>;
+export default function AnimalShow({ type }) {
+  return <div>{type}</div>;
 }
